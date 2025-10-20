@@ -9,10 +9,14 @@ Enable data-driven governance through unified Power BI visuals.
 
 **Key DAX calculations used in the dashboard**
 % Security Pass Checked = DIVIDE(CALCULATE(COUNTROWS(FILTER('Delivery Quality Mgmt', 'Delivery Quality Mgmt'[SecurityChecksPassed] = "Yes"))), COUNTROWS('Delivery Quality Mgmt'))
+
 % SLA Breached = DIVIDE(CALCULATE(COUNTROWS(FILTER('Delivery Quality Mgmt', 'Delivery Quality Mgmt'[SLA_Breached]="Yes"))), COUNTROWS('Delivery Quality Mgmt'))
+
 Avg Timeline % = AVERAGE('Delivery Quality Mgmt'[TimelinessScore])
+
 Cost Adherence % = AVERAGE('Delivery Quality Mgmt'[CostAdherencePercent])
 Customer Satisfaction Trends = AVERAGE('Delivery Quality Mgmt'[CustomerSatisfactionScore])
+
 Quality Gate Pass % = DIVIDE(CALCULATE(COUNTROWS(FILTER('Delivery Quality Mgmt', 'Delivery Quality Mgmt'[QualityGateStatus] = " Passed"))), COUNTROWS('Delivery Quality Mgmt'))
 
 <img width="875" height="470" alt="image" src="https://github.com/user-attachments/assets/db54e24b-1eb8-48c5-bdde-5c5048732cca" />
@@ -22,3 +26,5 @@ Quality Gate Pass % = DIVIDE(CALCULATE(COUNTROWS(FILTER('Delivery Quality Mgmt',
 Delivery Managers can track deviations early and prevent SLA breaches.
 PMOs gain visibility into scope creep, testing quality, and overall cost adherence.
 Business Owners can monitor customer satisfaction & quality gate health before deployment.
+
+Data Source : Open AI Generated
